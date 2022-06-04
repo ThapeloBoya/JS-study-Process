@@ -1,0 +1,32 @@
+<html>
+    <head></head>
+    <body>
+        <form id="form">
+            <label>Input temperature:</label>
+            <input id="temperature">
+                <br>
+                    <button id="celc" onclick="convert('celc')">Celsius</button>
+                    <button id="fah" onclick="convert('fah')">Fahrenheight</button>
+</form>
+                <script>
+function convert(mode) {
+  let temperature = parseInt(document.getElementById('temperature').value);
+
+  let answer = 0;
+  switch (mode) {
+    case 'celc':
+      answer = (temperature * 1.8) + 32;
+      break;
+    case 'fah':
+      answer = (temperature - 32) / 1.8;
+      break;
+    default:
+      alert('Incorrect mode.');
+  }
+
+  document.write('the answer is ' + answer);
+}
+
+</script>
+</body>
+</html>
